@@ -1,18 +1,20 @@
 package Guardaropa;
 
+import java.awt.*;
+
 public class Prenda {
-    TipodePrenda tipo;
-    String material;
-    String color_ppal;
-    String color_sec;
+    private TipodePrenda tipo;
+    private Material material;
+    private Color color_ppal;
+    private Color color_sec;
 
-    public Prenda(Categoria categoria, String tipo, String material, String color){
-        this.tipo= new TipodePrenda(categoria, tipo);
-        this.material=material;
-        this.color_ppal=color;
+    public Prenda(TipodePrenda tipo, Material material, Color color, Color color2){
+        this.tipo = tipo;
+        this.material = material;
+        this.color_ppal = color;
+        this.color_sec = color2;
     }
-
-    public void setColor_sec(String color_sec) {
-        this.color_sec = color_sec;
+    public Categoria getCategoria(){
+        return tipo.getCategoria();
     }
 }

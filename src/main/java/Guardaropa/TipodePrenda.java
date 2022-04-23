@@ -1,11 +1,22 @@
 package Guardaropa;
+//Pensamos tipo de prenda con una clase enum ya que no hay inifitas tipos de prenda y por criterio de
+//usuario sabemos que no le interesa cargarlo.
+public enum TipodePrenda{
 
-public class TipodePrenda {
-    Categoria categoria;
-    String nombre;
+  ZAPATO(Categoria.CALZADO),
+  CAMISA(Categoria.PARTE_SUPERIOR),
+  TACOS(Categoria.CALZADO),
+  REMERON(Categoria.PARTE_SUPERIOR),
+  SHORT(Categoria.PARTE_INFERIOR),
+  TOP(Categoria.PARTE_SUPERIOR),
+  JEAN(Categoria.PARTE_INFERIOR),
+  VESTIDO(Categoria.PARTE_SUPERIOR);
 
-    public TipodePrenda(Categoria categoria, String nombre){
-        this.categoria=categoria;
-        this.nombre=nombre;
-    }
+  private Categoria categoria;
+  TipodePrenda(Categoria categoria) {
+    this.categoria = categoria;
+  };
+  public Categoria getCategoria() {
+    return this.categoria;
+  }
 }
