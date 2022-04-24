@@ -1,15 +1,12 @@
-import Guardaropa.Categoria;
-import Guardaropa.Material;
-import Guardaropa.Prenda;
-import Guardaropa.TipodePrenda;
+import Guardaropa.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.awt.*;
 
 public class PrendaTest {
-  Prenda shortJean = new Prenda(TipodePrenda.SHORT, Material.JEAN, Color.BLUE,null);
-  Prenda tacones = new Prenda(TipodePrenda.TACOS, Material.CHAROL,Color.BLACK,null);
+  Prenda shortJean = new Prenda(TipodePrenda.SHORT,Material.JEAN, Color.BLUE,null, Trama.LISA);
+  Prenda tacones = new Prenda(TipodePrenda.TACOS,Material.CHAROL,Color.BLACK,null,null);
 
   @Test
   public void CategoriaPrendaParteInferior(){
