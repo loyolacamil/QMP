@@ -1,21 +1,22 @@
 package Guardaropa;
 
+import Guardaropa.PrendaCaracteristicas.Material;
+import Guardaropa.PrendaCaracteristicas.TipodePrenda;
+import Guardaropa.PrendaCaracteristicas.Trama;
+
 import java.awt.*;
 
-public class PrendaBorrador {
-  private TipodePrenda tipo;
-  private Material material;
-  private Color color_ppal;
-  private Color color_sec;
-  private Trama trama;
+public abstract class PrendaBorrador {
+  public TipodePrenda tipo;
+  public Material material;
+  public Color color_ppal;
+  public Color color_sec;
+  public Trama trama;
 
-  public Prenda crearPrenda(){
-    //validar previamente con una claseException
-    return new Prenda(this.tipo,this.material,this.color_ppal,this.color_sec,this.trama);
-  }
-
-  public void setTipo(TipodePrenda tipo) {
-    this.tipo = tipo;
+  public void crearPrenda(){
+    //El constructor valida a la prenda, que no se carguen con nulls
+    new Prenda(this.tipo,this.material,this.color_ppal,this.color_sec,this.trama);
+    //metodo para eliminar el borrador TODO
   }
 
   public void setMaterial(Material material) {

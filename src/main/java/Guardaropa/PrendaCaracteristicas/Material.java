@@ -1,4 +1,4 @@
-package Guardaropa;
+package Guardaropa.PrendaCaracteristicas;
 //no se como asociar varios tipos de prendas a un material.
 public enum Material {
   JEAN,

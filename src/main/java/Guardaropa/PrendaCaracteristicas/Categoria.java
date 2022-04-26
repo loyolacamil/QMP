@@ -1,4 +1,4 @@
-package Guardaropa;
+package Guardaropa.PrendaCaracteristicas;
 
 public enum Categoria {
     PARTE_SUPERIOR,

@@ -1,4 +1,7 @@
-package Guardaropa;
+package Guardaropa.PrendaCaracteristicas;
+
+import Guardaropa.PrendaCaracteristicas.Categoria;
+
 //Pensamos tipo de prenda con una clase enum ya que no hay inifitas tipos de prenda y por criterio de
 //usuario sabemos que no le interesa cargarlo.
 public enum TipodePrenda{

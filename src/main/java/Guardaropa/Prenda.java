@@ -1,6 +1,13 @@
 package Guardaropa;
 
+import Guardaropa.PrendaCaracteristicas.Categoria;
+import Guardaropa.PrendaCaracteristicas.Material;
+import Guardaropa.PrendaCaracteristicas.TipodePrenda;
+import Guardaropa.PrendaCaracteristicas.Trama;
+
 import java.awt.*;
+
+import static java.util.Objects.requireNonNull;
 
 public class Prenda {
     private TipodePrenda tipo;
@@ -10,9 +17,9 @@ public class Prenda {
     private Trama trama;
 
     public Prenda(TipodePrenda tipo, Material material, Color color, Color color2, Trama trama){
-        this.tipo = tipo;
-        this.material = material;
-        this.color_ppal = color;
+        this.tipo = requireNonNull(tipo, "tipo de prenda es obligatorio");
+        this.material = requireNonNull(material, "material es obligatorio");
+        this.color_ppal = requireNonNull(color, "color es obligatorio");
         this.color_sec = color2;
         if (trama == null){
             this.trama = Trama.LISA;
@@ -21,4 +28,5 @@ public class Prenda {
     public Categoria getCategoria(){
         return tipo.getCategoria();
     }
+
 }
