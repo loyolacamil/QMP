@@ -1,8 +1,9 @@
-package Guardaropa;
+package Borradores;
 
-import Guardaropa.PrendaCaracteristicas.Material;
-import Guardaropa.PrendaCaracteristicas.TipodePrenda;
-import Guardaropa.PrendaCaracteristicas.Trama;
+import Guardaropa.Prenda;
+import PrendaCaracteristicas.Material;
+import PrendaCaracteristicas.TipodePrenda;
+import PrendaCaracteristicas.Trama;
 
 import java.awt.*;
 
@@ -13,7 +14,7 @@ public abstract class PrendaBorrador {
   public Color color_sec;
   public Trama trama;
 
-  public void crearPrenda(){
+  public void crearPrenda() {
     //El constructor valida a la prenda, que no se carguen con nulls
     new Prenda(this.tipo,this.material,this.color_ppal,this.color_sec,this.trama);
     //metodo para eliminar el borrador TODO

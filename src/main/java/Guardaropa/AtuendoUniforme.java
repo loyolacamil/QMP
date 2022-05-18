@@ -1,6 +1,10 @@
 package Guardaropa;
 
-public class AtuendoUniforme {
+import Borradores.PrendaCalzadoBorrador;
+import Borradores.PrendaInferiorBorrador;
+import Borradores.PrendaSuperiorBorrador;
+
+public class AtuendoUniforme extends Atuendo {
   //Colegio colegio;
   //Rempesar si el tipo de prenda tiene a la categoria o al revez TODO
   PrendaSuperiorBorrador prendaSuperior;

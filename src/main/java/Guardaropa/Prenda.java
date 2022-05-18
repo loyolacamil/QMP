@@ -1,9 +1,9 @@
 package Guardaropa;
 
-import Guardaropa.PrendaCaracteristicas.Categoria;
-import Guardaropa.PrendaCaracteristicas.Material;
-import Guardaropa.PrendaCaracteristicas.TipodePrenda;
-import Guardaropa.PrendaCaracteristicas.Trama;
+import PrendaCaracteristicas.Categoria;
+import PrendaCaracteristicas.Material;
+import PrendaCaracteristicas.TipodePrenda;
+import PrendaCaracteristicas.Trama;
 
 import java.awt.*;
 
@@ -27,6 +27,9 @@ public class Prenda {
     }
     public Categoria getCategoria(){
         return tipo.getCategoria();
+    }
+    public Boolean aptoParaTemperatura(Integer temp) {
+        return tipo.getTemperatura() <= temp;
     }
 
 }
