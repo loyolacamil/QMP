@@ -27,10 +27,10 @@ public class Usuario {
   public Atuendo sugerirAtuendoClimatico(String ciudad){
     //TODO me falta entender como recibir la temperatura como un Int
     List<Map<String, Object>> condicionWeather = this.condicion.getWeather(ciudad);
-    Object temp = condicionWeather.get(0).get("Temperature");
+    Integer temp = (Integer) condicionWeather.get(0).get("Temperature");
     Random ramdomGet = new Random();
-    return this.guardarropa.getAtuendosSegunClima(temp)
-        .get(ramdomGet.nextInt(guardarropa.getAtuendosSegunClima(temp).size()));
+    return this.getAtuendosSegunClima(temp)
+        .get(ramdomGet.nextInt(this.getAtuendosSegunClima(temp).size()));
   }
 
   public List<Atuendo> getAtuendosSegunClima(Integer temp) {

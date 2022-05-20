@@ -1,6 +1,7 @@
 package Guardaropa;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 public class Guardarropa {
   private List<Atuendo> atuendos;
@@ -16,5 +17,4 @@ public class Guardarropa {
     return this.atuendos.stream().filter(atuendo -> atuendo.atuendoAptoTemperatura(temp))
         .collect(Collectors.toList());
   }
-
 }
