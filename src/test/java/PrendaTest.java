@@ -1,8 +1,8 @@
 import Guardaropa.*;
-import Guardaropa.PrendaCaracteristicas.Categoria;
-import Guardaropa.PrendaCaracteristicas.Material;
-import Guardaropa.PrendaCaracteristicas.TipodePrenda;
-import Guardaropa.PrendaCaracteristicas.Trama;
+import PrendaCaracteristicas.Categoria;
+import PrendaCaracteristicas.Material;
+import PrendaCaracteristicas.TipodePrenda;
+import PrendaCaracteristicas.Trama;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

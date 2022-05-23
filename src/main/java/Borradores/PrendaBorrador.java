@@ -1,10 +1,13 @@
-package Guardaropa;
+package Borradores;
 
-import Guardaropa.PrendaCaracteristicas.Material;
-import Guardaropa.PrendaCaracteristicas.TipodePrenda;
-import Guardaropa.PrendaCaracteristicas.Trama;
+import Guardaropa.Prenda;
+import PrendaCaracteristicas.Material;
+import PrendaCaracteristicas.TipodePrenda;
+import PrendaCaracteristicas.Trama;
 
 import java.awt.*;
+
+import static java.util.Objects.requireNonNull;
 
 public abstract class PrendaBorrador {
   public TipodePrenda tipo;
@@ -13,10 +16,19 @@ public abstract class PrendaBorrador {
   public Color color_sec;
   public Trama trama;
 
-  public void crearPrenda(){
-    //El constructor valida a la prenda, que no se carguen con nulls
+  public PrendaBorrador(){
+    this.trama = Trama.LISA;
+  }
+  public void crearPrenda() {
+    this.validarPrenda();
     new Prenda(this.tipo,this.material,this.color_ppal,this.color_sec,this.trama);
     //metodo para eliminar el borrador TODO
+  }
+
+  public void validarPrenda () {
+    requireNonNull(this.tipo, "tipo de prenda es obligatorio");
+    requireNonNull(this.material, "material es obligatorio");
+    requireNonNull(this.color_ppal, "color es obligatorio");
   }
 
   public void setMaterial(Material material) {

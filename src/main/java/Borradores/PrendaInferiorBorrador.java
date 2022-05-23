@@ -1,8 +1,8 @@
-package Guardaropa;
+package Borradores;
 
-import Guardaropa.Exceptions.PrendaInferiorException;
-import Guardaropa.PrendaCaracteristicas.Categoria;
-import Guardaropa.PrendaCaracteristicas.TipodePrenda;
+import Exceptions.PrendaInferiorException;
+import PrendaCaracteristicas.Categoria;
+import PrendaCaracteristicas.TipodePrenda;
 
 
 public class PrendaInferiorBorrador extends PrendaBorrador {

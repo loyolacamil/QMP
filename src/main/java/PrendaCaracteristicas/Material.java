@@ -1,4 +1,4 @@
-package Guardaropa.PrendaCaracteristicas;
+package PrendaCaracteristicas;
 //no se como asociar varios tipos de prendas a un material.
 public enum Material {
   JEAN,
@@ -9,5 +9,5 @@ public enum Material {
   /*
   private TipodePrenda tipo;
   Material(TipodePrenda tipo) {this.tipo = tipo;}
-*/
+ */
 }

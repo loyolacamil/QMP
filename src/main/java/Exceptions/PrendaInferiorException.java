@@ -1,4 +1,4 @@
-package Guardaropa.Exceptions;
+package Exceptions;
 
 public class PrendaInferiorException extends Exception {
   public PrendaInferiorException (String msg) {
