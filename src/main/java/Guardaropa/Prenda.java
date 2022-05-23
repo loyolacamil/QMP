@@ -17,13 +17,11 @@ public class Prenda {
     private Trama trama;
 
     public Prenda(TipodePrenda tipo, Material material, Color color, Color color2, Trama trama){
-        this.tipo = requireNonNull(tipo, "tipo de prenda es obligatorio");
-        this.material = requireNonNull(material, "material es obligatorio");
-        this.color_ppal = requireNonNull(color, "color es obligatorio");
+        this.tipo = tipo;
+        this.material = material;
+        this.color_ppal = color;
         this.color_sec = color2;
-        if (trama == null){
-            this.trama = Trama.LISA;
-        }else this.trama = trama;
+        this.trama = trama;
     }
     public Categoria getCategoria(){
         return tipo.getCategoria();
