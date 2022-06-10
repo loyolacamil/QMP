@@ -16,4 +16,12 @@ public abstract class Atuendo {
   public Boolean atuendoAptoTemperatura(Integer temp){
     return this.prendas.stream().allMatch(prenda -> atuendoAptoTemperatura(temp));
   }
+
+  public void agregarPrenda(Prenda prenda) {
+    this.prendas.add(prenda);
+  }
+
+  public void eliminarPrenda(Prenda prenda) {
+    this.prendas.remove(prenda);
+  }
 }
